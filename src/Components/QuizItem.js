@@ -15,7 +15,7 @@ function QuizItem({question,suffeledAnswers,correctChoice,questionNo}){
     }
     return(
         <>
-        <div className="card my-3 text-bg-light" style={{width: "80%"}}>
+        <div className="card my-3 text-bg-light" style={{width: "100%"}}>
             <div className="card-body ">
                 <h5 className="card-title">{`Q${questionNo}: ${question}`}</h5>
                 {

@@ -67,6 +67,12 @@ function QuizSection(){
                 })
             }
             
+          {/* if loading then submit button will be disabled */}
+           { !loading?<div class="d-grid gap-2">
+            <button type="button" className="btn btn-success text-center" onClick={()=>{
+              alert("You want to submit text");
+            }}>Submit</button>
+          </div>:""}
         </div>
         
         </>
