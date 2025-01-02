@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function QuizItem({question,suffeledAnswers,correctChoice}){
+function QuizItem({question,suffeledAnswers,correctChoice,questionNo}){
     const [selectedAns,setSelectedAns]=useState(); 
 
   function  handleSubmitAns(){
@@ -17,7 +17,7 @@ function QuizItem({question,suffeledAnswers,correctChoice}){
         <>
         <div className="card my-3 text-bg-light" style={{width: "80%"}}>
             <div className="card-body ">
-                <h5 className="card-title">{question}</h5>
+                <h5 className="card-title">{`Q${questionNo}: ${question}`}</h5>
                 {
                     suffeledAnswers.map((el,idx)=>{
                        return <div key={idx}><input onChange={selectedAnsHandel} type="radio"id={`option${idx}`} value={el} name={`question-${question}`}/>
