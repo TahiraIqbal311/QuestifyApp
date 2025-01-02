@@ -23,7 +23,7 @@ function QuizSection(){
 
   useEffect(()=>{
     const fetchQuizData=async()=>{
-      let url=`https://opentdb.com/api.php?amount=10&category=9&difficulty=hard&type=multiple`;
+      let url=`https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=multiple`;//general knowledge
       setLoading(true);
       try{
         const response=await fetch(url);
